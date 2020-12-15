@@ -1,0 +1,275 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L SamacSys_Parts:MLX90640ESF-BAB-000-SP IC1
+U 1 1 5FD8CAA7
+P 3500 2450
+F 0 "IC1" H 3500 2200 50  0000 L CNN
+F 1 "MLX90640ESF-BAB-000-SP" H 4350 2200 50  0000 L CNN
+F 2 "SamacSys_Parts:MLX90640ESFBAB000SP" H 4350 2850 50  0001 L CNN
+F 3 "https://www.melexis.com/-/media/files/documents/datasheets/mlx90640-datasheet-melexis.pdf" H 4350 2750 50  0001 L CNN
+F 4 "Board Mount Temperature Sensors 32X24 thermal array sensor, 3Volt, 60deg total FOV" H 4350 2650 50  0001 L CNN "Description"
+F 5 "1.55" H 4350 2550 50  0001 L CNN "Height"
+F 6 "Melexis" H 4350 2450 50  0001 L CNN "Manufacturer_Name"
+F 7 "MLX90640ESF-BAB-000-SP" H 4350 2350 50  0001 L CNN "Manufacturer_Part_Number"
+F 8 "" H 4350 2250 50  0001 L CNN "Arrow Part Number"
+F 9 "" H 4350 2150 50  0001 L CNN "Arrow Price/Stock"
+F 10 "482-MLX90640ESFBABSP" H 4350 2050 50  0001 L CNN "Mouser Part Number"
+F 11 "https://www.mouser.co.uk/ProductDetail/Melexis/MLX90640ESF-BAB-000-SP?qs=y6ZabgHbY%252BwqHrvRZCHRaw%3D%3D" H 4350 1950 50  0001 L CNN "Mouser Price/Stock"
+	1    3500 2450
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C C1
+U 1 1 5FD8D464
+P 1800 2700
+F 0 "C1" H 1915 2746 50  0000 L CNN
+F 1 "0.1uF" H 1915 2655 50  0000 L CNN
+F 2 "Capacitor_SMD:C_0805_2012Metric" H 1838 2550 50  0001 C CNN
+F 3 "~" H 1800 2700 50  0001 C CNN
+	1    1800 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_US R2
+U 1 1 5FD8D76E
+P 5750 1550
+F 0 "R2" H 5818 1596 50  0000 L CNN
+F 1 "2.2k" H 5818 1505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5790 1540 50  0001 C CNN
+F 3 "~" H 5750 1550 50  0001 C CNN
+	1    5750 1550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Jumper:SolderJumper_3_Bridged123 JP1
+U 1 1 5FD8DCB0
+P 5400 1150
+F 0 "JP1" H 5400 1263 50  0000 C CNN
+F 1 "I2C" H 5400 1354 50  0000 C CNN
+F 2 "Jumper:SMT-JUMPER_3_2-NC_TRACE_SILK" H 5400 1150 50  0001 C CNN
+F 3 "~" H 5400 1150 50  0001 C CNN
+	1    5400 1150
+	-1   0    0    1   
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x04 J1
+U 1 1 5FD8E4FD
+P 2700 1050
+F 0 "J1" H 2780 1042 50  0000 L CNN
+F 1 "Conn_01x04" H 2780 951 50  0000 L CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x04_P2.54mm_Vertical" H 2700 1050 50  0001 C CNN
+F 3 "~" H 2700 1050 50  0001 C CNN
+	1    2700 1050
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D1
+U 1 1 5FD8EC94
+P 2550 2850
+F 0 "D1" V 2589 2732 50  0000 R CNN
+F 1 "LED" V 2498 2732 50  0000 R CNN
+F 2 "LED_SMD:LED_0805_2012Metric" H 2550 2850 50  0001 C CNN
+F 3 "~" H 2550 2850 50  0001 C CNN
+	1    2550 2850
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:R_US R1
+U 1 1 5FD8FEE4
+P 5050 1550
+F 0 "R1" H 5118 1596 50  0000 L CNN
+F 1 "2.2k" H 5118 1505 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 5090 1540 50  0001 C CNN
+F 3 "~" H 5050 1550 50  0001 C CNN
+	1    5050 1550
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5050 1400 5050 1150
+Wire Wire Line
+	5050 1150 5200 1150
+Wire Wire Line
+	5750 1150 5750 1400
+Wire Wire Line
+	5600 1150 5750 1150
+$Comp
+L power:+3.3V #PWR0101
+U 1 1 5FD90C71
+P 2300 850
+F 0 "#PWR0101" H 2300 700 50  0001 C CNN
+F 1 "+3.3V" H 2315 1023 50  0000 C CNN
+F 2 "" H 2300 850 50  0001 C CNN
+F 3 "" H 2300 850 50  0001 C CNN
+	1    2300 850 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0102
+U 1 1 5FD90EA8
+P 2550 3150
+F 0 "#PWR0102" H 2550 2900 50  0001 C CNN
+F 1 "GND" H 2555 2977 50  0000 C CNN
+F 2 "" H 2550 3150 50  0001 C CNN
+F 3 "" H 2550 3150 50  0001 C CNN
+	1    2550 3150
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0103
+U 1 1 5FD90FF1
+P 5400 850
+F 0 "#PWR0103" H 5400 700 50  0001 C CNN
+F 1 "+3.3V" H 5415 1023 50  0000 C CNN
+F 2 "" H 5400 850 50  0001 C CNN
+F 3 "" H 5400 850 50  0001 C CNN
+	1    5400 850 
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 850  5400 1000
+$Comp
+L power:GND #PWR0104
+U 1 1 5FD9176B
+P 4000 3200
+F 0 "#PWR0104" H 4000 2950 50  0001 C CNN
+F 1 "GND" H 4005 3027 50  0000 C CNN
+F 2 "" H 4000 3200 50  0001 C CNN
+F 3 "" H 4000 3200 50  0001 C CNN
+	1    4000 3200
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:+3.3V #PWR0105
+U 1 1 5FD91B82
+P 4650 2350
+F 0 "#PWR0105" H 4650 2200 50  0001 C CNN
+F 1 "+3.3V" H 4665 2523 50  0000 C CNN
+F 2 "" H 4650 2350 50  0001 C CNN
+F 3 "" H 4650 2350 50  0001 C CNN
+	1    4650 2350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4650 2350 4650 2450
+Wire Wire Line
+	4650 2450 4500 2450
+Wire Wire Line
+	4000 3200 4000 3050
+$Comp
+L power:+3.3V #PWR0106
+U 1 1 5FD922E9
+P 1800 2400
+F 0 "#PWR0106" H 1800 2250 50  0001 C CNN
+F 1 "+3.3V" H 1815 2573 50  0000 C CNN
+F 2 "" H 1800 2400 50  0001 C CNN
+F 3 "" H 1800 2400 50  0001 C CNN
+	1    1800 2400
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0107
+U 1 1 5FD926DF
+P 1800 3000
+F 0 "#PWR0107" H 1800 2750 50  0001 C CNN
+F 1 "GND" H 1805 2827 50  0000 C CNN
+F 2 "" H 1800 3000 50  0001 C CNN
+F 3 "" H 1800 3000 50  0001 C CNN
+	1    1800 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1800 3000 1800 2850
+Wire Wire Line
+	1800 2550 1800 2400
+$Comp
+L Device:R_US R3
+U 1 1 5FD93544
+P 2550 2400
+F 0 "R3" H 2618 2446 50  0000 L CNN
+F 1 "330" H 2618 2355 50  0000 L CNN
+F 2 "Resistor_SMD:R_0805_2012Metric" V 2590 2390 50  0001 C CNN
+F 3 "~" H 2550 2400 50  0001 C CNN
+	1    2550 2400
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2550 2550 2700
+Wire Wire Line
+	2550 3150 2550 3000
+$Comp
+L power:+3.3V #PWR0108
+U 1 1 5FD94759
+P 2550 2100
+F 0 "#PWR0108" H 2550 1950 50  0001 C CNN
+F 1 "+3.3V" H 2565 2273 50  0000 C CNN
+F 2 "" H 2550 2100 50  0001 C CNN
+F 3 "" H 2550 2100 50  0001 C CNN
+	1    2550 2100
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 2100 2550 2250
+Text Label 3350 2450 2    50   ~ 0
+SCL
+Text Label 4150 1700 0    50   ~ 0
+SDA
+Wire Wire Line
+	4150 1700 4000 1700
+Wire Wire Line
+	4000 1700 4000 1850
+Wire Wire Line
+	3500 2450 3350 2450
+Text Label 4900 1850 2    50   ~ 0
+SCL
+Text Label 5600 1850 2    50   ~ 0
+SDA
+Wire Wire Line
+	5600 1850 5750 1850
+Wire Wire Line
+	5750 1850 5750 1700
+Wire Wire Line
+	5050 1700 5050 1850
+Wire Wire Line
+	5050 1850 4900 1850
+$Comp
+L power:GND #PWR0109
+U 1 1 5FDA060D
+P 2150 1150
+F 0 "#PWR0109" H 2150 900 50  0001 C CNN
+F 1 "GND" H 2155 977 50  0000 C CNN
+F 2 "" H 2150 1150 50  0001 C CNN
+F 3 "" H 2150 1150 50  0001 C CNN
+	1    2150 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2500 1050 2150 1050
+Wire Wire Line
+	2150 1050 2150 1150
+Wire Wire Line
+	2300 850  2300 950 
+Wire Wire Line
+	2300 950  2500 950 
+Text Label 2400 1150 2    50   ~ 0
+SCL
+Text Label 2400 1250 2    50   ~ 0
+SDA
+Wire Wire Line
+	2400 1250 2500 1250
+Wire Wire Line
+	2500 1150 2400 1150
+$EndSCHEMATC
